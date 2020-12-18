@@ -230,6 +230,14 @@ func TimeV(x []time.Time) *K {
 	return &K{Type: KT, Attr: NONE, Data: x}
 }
 
+func Timespan(x time.Duration) *K {
+	return &K{Type: -KN, Attr: NONE, Data: x}
+}
+
+func TimespanV(x []time.Duration) *K {
+	return &K{Type: KN, Attr: NONE, Data: x}
+}
+
 func Error(x error) *K {
 	return &K{Type: KERR, Attr: NONE, Data: x}
 }
